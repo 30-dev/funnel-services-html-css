@@ -1,0 +1,306 @@
+#ServicesFunnel{
+    
+    --color-funnel-part-4: #207de9;
+    --color-funnel-part-4-dark: #0056b3;
+
+    --color-funnel-part-3: #28a745;
+    --color-funnel-part-3-dark: #1e7e34;
+
+    --color-funnel-part-2: #ffc107;
+    --color-funnel-part-2-dark: #c69500;
+
+    --color-funnel-part-1: #ef7d21;
+    --color-funnel-part-1-dark: #c75a02;
+
+    --color-text: #222;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-text);
+}
+
+.container_services_funnel{
+    display: flex;
+    transform: translateX(-2.5rem);
+}
+
+.services_funnel_header{
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.services_funnel_title{
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.services_funnel_title > span{
+    color: var(--color-funnel-part-4);
+}
+
+.services_funnel_title-description{
+    font-size: 1.3rem;
+    line-height: 35px;
+    margin: 0 0 24px;
+}
+
+.section_services_funnel .container_services_funnel{
+    display: flex;
+    height: 100%;
+}
+
+.services_container_svg{
+    height: 100%;
+    width: 33vw;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.section_services_funnel .services_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 0;
+    width: 66vw;
+}
+
+.section_services_funnel .services_list .service_item{
+    display: grid;
+    grid-template-columns: .75fr 2fr .25fr; 
+    height: 25%;
+    position: relative;
+}
+
+.section_services_funnel .services_list .service_item::after{
+    content: "";
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    width: calc(125% - 1rem);
+    left: calc(-25% - 1rem);
+    z-index: 0;
+}
+
+.service_item-1::after{
+    background-color: var(--color-funnel-part-4);
+}
+
+.service_item-2::after{
+    background-color: var(--color-funnel-part-3);
+}
+
+.service_item-3::after{
+    background-color: var(--color-funnel-part-2);
+}
+
+.service_item-4::after{
+    background-color: var(--color-funnel-part-1);
+}
+
+.section_services_funnel .services_list .service_item .service_title{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    text-align: right;
+    font-size: clamp(1.2rem, 1vw + 1.2em, 1.5rem);
+    height: 100%;
+    width: 135%;
+    transform: translateX(-25%);
+    margin: 0;
+    line-height: 34px;
+    letter-spacing: -1.008px;
+}
+
+.section_services_funnel .services_list .service_item .service_links{
+    display: flex; 
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+}
+
+.section_services_funnel .services_list .service_item .service_links a {
+    flex: 0 0 48%; 
+    text-wrap: pretty;
+    box-sizing: border-box; 
+    margin: 1%;    
+    text-align: left;
+    text-decoration: none;
+    font-size: clamp(16px, 1vw + 1rem, 18px);
+    line-height: 28px;
+    letter-spacing: -.168px;
+    color: var(--color-text);
+}
+
+.section_services_funnel .services_list .service_item .service_links a:hover{
+    color: var(--color-funnel-part-4);
+}
+
+
+.section_services_funnel .services_list .service_item .service_links a::after {
+    content: '';
+    display: inline-block;
+    margin-left: 6px;
+    width: 17px;
+    height: 16px;
+    background: currentColor;
+    mask: url('/assets/bsf-arrow.svg') no-repeat center;
+    -webkit-mask: url('/assets/bsf-arrow.svg') no-repeat center;
+}
+
+.funnel-part-1{
+    fill: var(--color-funnel-part-1);
+}
+.funnel-part-1-shadow{
+    fill: var(--color-funnel-part-1-dark);
+}
+
+.funnel-part-2{
+    fill: var(--color-funnel-part-2);
+}
+.funnel-part-2-shadow{
+    fill: var(--color-funnel-part-2-dark);
+}
+
+.funnel-part-3{
+    fill: var(--color-funnel-part-3);
+}
+.funnel-part-3-shadow{
+    fill: var(--color-funnel-part-3-dark);
+}
+
+.funnel-part-4{
+    fill: var(--color-funnel-part-4);
+}
+.funnel-part-4-shadow{
+    fill: var(--color-funnel-part-4-dark);
+}
+
+
+@media (min-width:1220px) and  (max-width: 1440px) {
+
+    .services_container_svg {
+        min-height: 100%;
+        width: 70vw;
+    }
+
+    .section_services_funnel .services_list .service_item .service_links a{
+        flex: 0 0 100%;
+    }
+
+    .section_services_funnel .services_list .service_item::after{
+        width: calc(100% + 25vw);
+        translate: -13vw;
+    }
+}
+
+@media (min-width: 721px) and (max-width:1219px){
+
+    #ServicesFunnel{
+        padding: 0 64px;
+        width: calc(100% - 128px);
+        overflow-x: hidden;
+    }
+
+    .container_services_funnel{
+        transform: translateX(0);
+        width: 100%;
+        position: relative;
+        overflow: hidden;         
+    }
+
+    .services_funnel_header{
+        width: 100%;
+        margin: 0;
+    }
+
+    .services_funnel_title{
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .services_funnel_title-description{
+        font-size: 21px;
+        line-height: 35px;
+        letter-spacing: -.005em;
+        margin: 0 0 24px;
+    }
+
+    .services_container_svg{
+        position: absolute;
+        right: -20vw;
+    }
+
+    .section_services_funnel .services_list {
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        width: 93%;
+        
+    }
+
+    .section_services_funnel .services_list .service_item{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+    .section_services_funnel .services_list .service_item .service_title{
+        width: 100%;
+        text-align: left;
+        transform: translateX(0);
+        justify-content: start;
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    .section_services_funnel .services_list .service_item .service_links {
+        padding-left: 0;
+    }
+
+    .section_services_funnel .services_list .service_item::after{
+        width: 95%;
+        left: 0;
+        bottom: -.5rem;
+    } 
+
+    .section_services_funnel .services_list .service_item .service_links a{
+        font-size: 1rem;
+        margin: .5rem .7rem 0 0;
+    }
+
+}
+
+@media (max-width: 720px) {
+
+    #ServicesFunnel{
+        padding: 0 1rem;
+        width: calc(100% - 2rem);
+    }
+
+    .services_funnel_title , .services_funnel_title-description{
+        text-align: left;
+    }
+
+    .services_container_svg{
+        position: absolute;
+        top: 2rem;
+        width: 35vw;
+    }
+    
+    .section_services_funnel .services_list .service_item .service_links a {
+        flex: 0 0 100%
+    }
+}
