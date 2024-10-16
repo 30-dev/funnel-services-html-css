@@ -1,3 +1,10 @@
+/* Reset */
+html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 #ServicesFunnel{
     
     --color-funnel-part-4: #207de9;
@@ -13,21 +20,147 @@
     --color-funnel-part-1-dark: #c75a02;
 
     --color-text: #222;
+    --color-dark: #0B1720;
 
     display: flex;
     flex-direction: column;
     height: 100%;
     min-height: 100vh;
-    width: 100vw;
-    padding: 1rem;
+    width: 100%;
+    max-width: 100vw;
+    margin-top: 2rem;
+    padding: 0;
     font-size: 1rem;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     color: var(--color-text);
+    overflow-x: hidden;
+    box-sizing: border-box;
+    
+
+    
 }
 
+.container_ssf{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 24px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.ssf_header{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container_ssf .ssf_title{
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 46px;
+    letter-spacing: -1.296px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: left;
+}
+
+.container_ssf .ssf_title > span {
+    color: var(--color-funnel-part-4);
+}
+
+.container_ssf .ssf_description{
+    width: 100%;
+    margin: 0;
+}
+
+.container_ssf .ssf_description p{
+    width: 100%;
+    margin: 0;
+    letter-spacing: -.005em;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+    color: var(--color-dark);
+}
+
+.ssf_group_graphic{
+    width: 110px;
+    position: absolute;
+    right: 0;
+    transform: scaleX(-1);
+}
+
+.ssf_group{
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+
+.ssf_group.group-1{
+    border-bottom: 2px solid var(--color-funnel-part-4);
+}
+
+.ssf_group.group-2{
+    border-bottom: 2px solid var(--color-funnel-part-3);
+}
+
+.ssf_group.group-3{
+    border-bottom: 2px solid var(--color-funnel-part-2);
+}
+
+.ssf_group.group-4{
+    border-bottom: 2px solid var(--color-funnel-part-1);
+}
+
+.ssf_group_subheader{
+    text-align: left;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 30px;
+    letter-spacing: -.864px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--color-text);
+}
+
+.ssf_group_item{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    align-self: flex-start;
+    box-sizing: border-box;
+}
+
+.ssf_link{
+    color: var(--color-text); 
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: -.081px;
+    text-decoration: none;
+    background: url(/assets/bsf-arrow.svg) no-repeat right center;
+    box-sizing: border-box;
+    word-break: break-word;
+    text-underline-position: under;
+    padding-right: 28px;
+}
+
+.ssf_link:hover{
+    color: var(--color-funnel-part-4);
+}
+/* 
 .container_services_funnel{
     display: flex;
     transform: translateX(-2.5rem);
@@ -158,7 +291,7 @@
     background: currentColor;
     mask: url('/assets/bsf-arrow.svg') no-repeat center;
     -webkit-mask: url('/assets/bsf-arrow.svg') no-repeat center;
-}
+} */
 
 .funnel-part-1{
     fill: var(--color-funnel-part-1);
@@ -189,7 +322,7 @@
 }
 
 
-@media (min-width:1220px) and  (max-width: 1440px) {
+/* @media (min-width:1220px) and  (max-width: 1440px) {
 
     .services_container_svg {
         min-height: 100%;
@@ -303,4 +436,4 @@
     .section_services_funnel .services_list .service_item .service_links a {
         flex: 0 0 100%
     }
-}
+} */
