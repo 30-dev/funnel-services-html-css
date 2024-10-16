@@ -38,9 +38,6 @@ html, body{
     color: var(--color-text);
     overflow-x: hidden;
     box-sizing: border-box;
-    
-
-    
 }
 
 .container_ssf{
@@ -82,6 +79,9 @@ html, body{
 .container_ssf .ssf_description{
     width: 100%;
     margin: 0;
+    margin-bottom: 56px;
+    max-width: 1200px;
+    margin-inline: auto;
 }
 
 .container_ssf .ssf_description p{
@@ -160,138 +160,6 @@ html, body{
 .ssf_link:hover{
     color: var(--color-funnel-part-4);
 }
-/* 
-.container_services_funnel{
-    display: flex;
-    transform: translateX(-2.5rem);
-}
-
-.services_funnel_header{
-    width: 100%;
-    max-width: 1200px;
-    margin-inline: auto;
-    text-align: center;
-}
-
-.services_funnel_title{
-    font-size: 4.5rem;
-    font-weight: 900;
-    margin: 0;
-}
-
-.services_funnel_title > span{
-    color: var(--color-funnel-part-4);
-}
-
-.services_funnel_title-description{
-    font-size: 1.3rem;
-    line-height: 35px;
-    margin: 0 0 24px;
-}
-
-.section_services_funnel .container_services_funnel{
-    display: flex;
-    height: 100%;
-}
-
-.services_container_svg{
-    height: 100%;
-    width: 33vw;
-    padding: 1rem;
-    z-index: 1;
-}
-
-.section_services_funnel .services_list{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 2rem 0;
-    width: 66vw;
-}
-
-.section_services_funnel .services_list .service_item{
-    display: grid;
-    grid-template-columns: .75fr 2fr .25fr; 
-    height: 25%;
-    position: relative;
-}
-
-.section_services_funnel .services_list .service_item::after{
-    content: "";
-    height: 2px;
-    position: absolute;
-    bottom: 0;
-    width: calc(125% - 1rem);
-    left: calc(-25% - 1rem);
-    z-index: 0;
-}
-
-.service_item-1::after{
-    background-color: var(--color-funnel-part-4);
-}
-
-.service_item-2::after{
-    background-color: var(--color-funnel-part-3);
-}
-
-.service_item-3::after{
-    background-color: var(--color-funnel-part-2);
-}
-
-.service_item-4::after{
-    background-color: var(--color-funnel-part-1);
-}
-
-.section_services_funnel .services_list .service_item .service_title{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    text-align: right;
-    font-size: clamp(1.2rem, 1vw + 1.2em, 1.5rem);
-    height: 100%;
-    width: 135%;
-    transform: translateX(-25%);
-    margin: 0;
-    line-height: 34px;
-    letter-spacing: -1.008px;
-}
-
-.section_services_funnel .services_list .service_item .service_links{
-    display: flex; 
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-left: 2rem;
-}
-
-.section_services_funnel .services_list .service_item .service_links a {
-    flex: 0 0 48%; 
-    text-wrap: pretty;
-    box-sizing: border-box; 
-    margin: 1%;    
-    text-align: left;
-    text-decoration: none;
-    font-size: clamp(16px, 1vw + 1rem, 18px);
-    line-height: 28px;
-    letter-spacing: -.168px;
-    color: var(--color-text);
-}
-
-.section_services_funnel .services_list .service_item .service_links a:hover{
-    color: var(--color-funnel-part-4);
-}
-
-
-.section_services_funnel .services_list .service_item .service_links a::after {
-    content: '';
-    display: inline-block;
-    margin-left: 6px;
-    width: 17px;
-    height: 16px;
-    background: currentColor;
-    mask: url('/assets/bsf-arrow.svg') no-repeat center;
-    -webkit-mask: url('/assets/bsf-arrow.svg') no-repeat center;
-} */
 
 .funnel-part-1{
     fill: var(--color-funnel-part-1);
@@ -321,119 +189,214 @@ html, body{
     fill: var(--color-funnel-part-4-dark);
 }
 
-
-/* @media (min-width:1220px) and  (max-width: 1440px) {
-
-    .services_container_svg {
-        min-height: 100%;
-        width: 70vw;
-    }
-
-    .section_services_funnel .services_list .service_item .service_links a{
-        flex: 0 0 100%;
-    }
-
-    .section_services_funnel .services_list .service_item::after{
-        width: calc(100% + 25vw);
-        translate: -13vw;
+@media (min-width: 576px){
+    .container_ssf{
+        padding-right: 32px;
+        padding-left: 32px;
     }
 }
 
-@media (min-width: 721px) and (max-width:1219px){
+@media (min-width: 768px ) {
 
-    #ServicesFunnel{
-        padding: 0 64px;
-        width: calc(100% - 128px);
-        overflow-x: hidden;
+    .container_ssf{
+        padding-right: 64px;
+        padding-left: 64px;
     }
 
-    .container_services_funnel{
-        transform: translateX(0);
-        width: 100%;
-        position: relative;
-        overflow: hidden;         
+    .container_ssf .ssf_title, .container_ssf .ssf_header{
+        text-align: center;
     }
 
-    .services_funnel_header{
-        width: 100%;
-        margin: 0;
-    }
-
-    .services_funnel_title{
-        font-size: 32px;
-        margin-bottom: 24px;
-    }
-
-    .services_funnel_title-description{
+    .container_ssf .ssf_description{
         font-size: 21px;
         line-height: 35px;
-        letter-spacing: -.005em;
-        margin: 0 0 24px;
     }
 
-    .services_container_svg{
-        position: absolute;
-        right: -20vw;
+    .container_ssf .ssf_group_graphic{
+        width: 134px;
+        height: auto;
     }
 
-    .section_services_funnel .services_list {
+}
+
+@media (min-width: 921px ){
+    .container_ssf .ssf_group_graphic{
+        width: 114px;
+    }
+
+    .ssf_group{
         display: flex;
-        gap: 2rem;
-        flex-direction: column;
-        width: 93%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .ssf_group_subheader{
+        flex-basis: 100%;
+        margin-bottom: 0;
+    }
+
+    .ssf_group_item{
+        flex-basis: 50%;
+        height: 50%
+    }
+}
+
+@media (min-width:1280px){
+
+    .container_ssf{
+        padding-left: 80px;
+        padding-right: 80px;
         
     }
 
-    .section_services_funnel .services_list .service_item{
+    .ssf_group_container{
         display: flex;
-        flex-direction: column;
-        padding-bottom: 1rem;
+        
+        margin-left: -80px;
     }
 
-    .section_services_funnel .services_list .service_item .service_title{
+    .container_ssf .ssf_title{
+        font-size: 72px;
+        line-height: 78px;
+    }
+
+    .ssf_groups{
+        margin-left: -420px;
+    }
+
+    .container_ssf .ssf_group_graphic{
+        position: relative;
+        transform: scale(1);
+        width: 50%;
+        max-width: 400px;
+        
+    }
+
+    .ssf_group{
+        display: grid;
+        grid-template:  "subheader item-1"
+                        "subheader item-2"
+                        "subheader item-3"
+                        "subheader item-4";
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 370px;
+        column-gap: 32px;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        height: auto;
+    }
+
+    .ssf_group{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .ssf_group_subheader{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        text-align: right;
         width: 100%;
-        text-align: left;
-        transform: translateX(0);
-        justify-content: start;
-        margin-top: .5rem;
-        margin-bottom: 1rem;
+        grid-area: subheader
     }
 
-    .section_services_funnel .services_list .service_item .service_links {
-        padding-left: 0;
+    .ssf_group_item{
+        width:100%;
+        height: auto;
     }
 
-    .section_services_funnel .services_list .service_item::after{
-        width: 95%;
-        left: 0;
-        bottom: -.5rem;
-    } 
-
-    .section_services_funnel .services_list .service_item .service_links a{
-        font-size: 1rem;
-        margin: .5rem .7rem 0 0;
+    .ssf_link{
+        font-size: 21px;
+        line-height: 28px;
+        letter-spacing: -.168px;
     }
 
-}
-
-@media (max-width: 720px) {
-
-    #ServicesFunnel{
-        padding: 0 1rem;
-        width: calc(100% - 2rem);
+    .ssf_group_item:nth-of-type(1){
+        grid-area: item-1;
+        
     }
 
-    .services_funnel_title , .services_funnel_title-description{
-        text-align: left;
+    .ssf_group_item:nth-of-type(2){
+        grid-area: item-2;
     }
 
-    .services_container_svg{
-        position: absolute;
-        top: 2rem;
-        width: 35vw;
+    .ssf_group_item:nth-of-type(3){
+        grid-area: item-3;
+    }
+
+    .ssf_group_item:nth-of-type(4){
+        grid-area: item-4;
     }
     
-    .section_services_funnel .services_list .service_item .service_links a {
-        flex: 0 0 100%
+}
+
+
+@media (min-width:1441px){
+    
+    .ssf_groups{
+        margin-left: -420px;
+        margin-right: 80px;
     }
-} */
+    
+    .ssf_group{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "subheader item-1 item-2"
+                            "subheader item-3 item-4";
+        padding-bottom: 40px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .ssf_group_graphic{
+        bottom: 40px;
+    }
+    
+    .container_ssf .ssf_title{
+        font-size:72px;
+        line-height: 56px;
+        letter-spacing: -2.592px
+    }
+
+    .container_ssf .ssf_description{
+        line-height: 56px;
+        letter-spacing: -2.592px
+    }
+
+    .ssf_group_item{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+
+    .ssf_group_subheader{
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: -1.008px;
+    }
+}
+
+@media (min-width: 1500px)  {
+    .ssf_groups{
+        margin-left: -480px;
+        margin-right: 0px;
+    }
+}
+
+@media (min-width: 1600px)  {
+    .ssf_groups{
+        margin-right: 100px;
+    }
+}
+@media (min-width: 1700px)  {
+    .ssf_groups{
+        margin-right: 160px;
+    }
+}
+
+@media (min-width: 1800px)  {
+    .ssf_groups{
+        margin-right: 200px;
+    }
+}
